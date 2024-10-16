@@ -7,8 +7,8 @@ public class GameManager : MonoBehaviour
 {
     static public GameManager Instance;    
 
-    public GameObject wallPrefab;
-    public float spawnTerm = 2;
+    public GameObject[] wallPrefabs;
+    public float spawnTerm = 2f;
 
     public TextMeshProUGUI scoreLabel;
 
@@ -40,7 +40,8 @@ public class GameManager : MonoBehaviour
         {
             spawnTimer -= spawnTerm;
 
-            GameObject obj = Instantiate(wallPrefab);
+            int randomIndex = Random.Range(0, wallPrefabs.Length);
+            GameObject obj = Instantiate(wallPrefabs[randomIndex]);
             obj.transform.position = new Vector2(14, Random.Range(-3.75f, 1.75f));
 
         }

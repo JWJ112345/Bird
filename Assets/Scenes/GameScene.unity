@@ -470,7 +470,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ccdadc355cf0284f9c801cf5c5cb2d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallPrefab: {fileID: 205650705496321131, guid: a8431b6fc348353429838668df6e86a5, type: 3}
+  wallPrefabs:
+  - {fileID: 205650705496321131, guid: a8431b6fc348353429838668df6e86a5, type: 3}
+  - {fileID: 82650809048907586, guid: 4039d1706617077438a53dcb5e21dd6e, type: 3}
   spawnTerm: 3
   scoreLabel: {fileID: 2094959703}
   score: 0
