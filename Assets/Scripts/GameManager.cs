@@ -1,16 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using TMPro;
-
 
 public class GameManager : MonoBehaviour
 {
-    static public GameManager Instance;
+    static public GameManager Instance;    
 
-    public GameObject[] wallPrefabs;
-    public float spawnTerm = 2f;
+    public GameObject wallPrefab;
+    public float spawnTerm = 2;
 
     public TextMeshProUGUI scoreLabel;
 
@@ -42,10 +40,8 @@ public class GameManager : MonoBehaviour
         {
             spawnTimer -= spawnTerm;
 
-            int randomIndex = Random.Range(0, wallPrefabs.Length);
-            GameObject obj = Instantiate(wallPrefabs[randomIndex]);
-
-            obj.transform.position = new Vector2(14, Random.Range(-2.75f, 2.75f));
+            GameObject obj = Instantiate(wallPrefab);
+            obj.transform.position = new Vector2(14, Random.Range(-3.75f, 1.75f));
 
         }
 
